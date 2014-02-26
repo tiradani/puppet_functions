@@ -1,0 +1,10 @@
+name 'tiradani-puppet_functions'
+version '0.1.0'
+
+author 'Anthony Tiradani'
+license 'Apache 2.0'
+source 'git@github.com:tiradani/puppet_functions.git'
+project_page 'https://github.com/tiradani/puppet_functions'
+summary 'Contains custom functions for puppet in addition to the stdlib functions'
+description 'Contains custom functions for puppet in addition to the stdlib functions'
+dependency 'puppetlabs/stdlib', '4.0.2'

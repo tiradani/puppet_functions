@@ -18,11 +18,11 @@ permissions and/or attributes may be specified in an override.
 This example creates '/tmp/create_path/testing123' and ensures that the
 '/tmp/create_path' directory is owned by the 'puppet' user:
 
-  create_path('/tmp/create_path/testing123')
+    create_path('/tmp/create_path/testing123')
 
-  File['/tmp/create_path'] {
-    owner => 'puppet',
-  }
+    File['/tmp/create_path'] {
+      owner => 'puppet',
+    }
 
 - *Type*: rvalue
 
@@ -32,7 +32,7 @@ and pass that to the File resource type.
             
   example ('official' method):
                     
-    we want to ensure that /foo/bar/baz exists
+    # we want to ensure that /foo/bar/baz exists
 
     $dirs = ['/foo', '/foo/bar', '/foo/bar/baz']
     file { $dirs:

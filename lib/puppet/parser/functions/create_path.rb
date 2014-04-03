@@ -21,7 +21,9 @@ module Puppet::Parser::Functions
 
     raise ArgumentError, ("create_path(): wrong number of arguments (#{args.length}; must be 1)") if args.length != 1
 
-    full_path = args[0].to_s
+    # Make a "shallow copy" of the path.  If we don't, we actually modify the supposedly immutable variable
+    # (if a variable is passed to this function)
+    full_path = args[0].to_s.dup
     Puppet::Parser::Functions.function(:validate_absolute_path)
     function_validate_absolute_path([full_path])
     # Strip leading slash

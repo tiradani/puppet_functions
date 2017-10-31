@@ -9,18 +9,18 @@ The puppet_functions module has only been tested against puppet 3.3.2.
 
 # Functions #
 
-create_path
+ensure_path
 ---
 Takes a string containing a fully qualified path and ensures that the
 directory specified **and** all parent directories exist.  Any special
 permissions and/or attributes may be specified in an override.
 
-This example creates '/tmp/create_path/testing123' and ensures that the
-'/tmp/create_path' directory is owned by the 'puppet' user:
+This example creates '/tmp/ensure_path/testing123' and ensures that the
+'/tmp/ensure_path' directory is owned by the 'puppet' user:
 
-    create_path('/tmp/create_path/testing123')
+    ensure_path('/tmp/ensure_path/testing123')
 
-    File['/tmp/create_path'] {
+    File['/tmp/ensure_path'] {
       owner => 'puppet',
     }
 
